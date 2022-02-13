@@ -13,6 +13,8 @@
 //   updateProductNum('case',59,false);
 // })
 
+
+//all button function
 function updateBtn(product,price,increas){
   if(product == 'iphone' && price == 1219 && increas == true){
     updateProductNum('iphone',1219,true);
@@ -38,11 +40,7 @@ function updateProductNum(product,price,isIncreasing){
   productTotal.innerText = productNumber * price;
   calculatetotal();
 }
-function getInputValue(product){
-  const productInput = document.getElementById(product + '-input').value;
-  const productNumber = parseInt(productInput);
-  return productNumber;
-}
+//calculate function
 function calculatetotal(){
   const phoneTotal = getInputValue('iphone') * 1219;
   const caseTotal = getInputValue('case') * 59;
@@ -52,4 +50,10 @@ function calculatetotal(){
   document.getElementById('sub-total').innerText = subtotal;
   document.getElementById('tax-amount').innerText = tax;
   document.getElementById('total-amount').innerText = totalPrice;
+}
+//get input function for calculation
+function getInputValue(product){
+  const productInput = document.getElementById(product + '-input').value;
+  const productNumber = parseInt(productInput);
+  return productNumber;
 }
