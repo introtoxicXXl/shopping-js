@@ -1,17 +1,29 @@
 //add phone input number
-document.getElementById('iphone-plus').addEventListener('click',function(){
-  updateProductNum('iphone',1219,true);
-})
-document.getElementById('iphone-minus').addEventListener('click',function(){
-  updateProductNum('iphone',1219,false);
-})
-//add case input number
-document.getElementById('case-plus').addEventListener('click',function(){
-  updateProductNum('case',59,true);
-})
-document.getElementById('case-minus').addEventListener('click',function(){
-  updateProductNum('case',59,false);
-})
+// document.getElementById('iphone-plus').addEventListener('click',function(){
+//   updateProductNum('iphone',1219,true);
+// })
+// document.getElementById('iphone-minus').addEventListener('click',function(){
+//   updateProductNum('iphone',1219,false);
+// })
+// //add case input number
+// // document.getElementById('case-plus').addEventListener('click',function(){
+// //   updateProductNum('case',59,true);
+// // })
+// document.getElementById('case-minus').addEventListener('click',function(){
+//   updateProductNum('case',59,false);
+// })
+
+function updateBtn(product,price,increas){
+  if(product == 'iphone' && price == 1219 && increas == true){
+    updateProductNum('iphone',1219,true);
+  }else if(product == 'case' && price == 59 && increas == true){
+    updateProductNum('case',59,true)
+  }else if(product == 'iphone' && price == 1219 && increas == false){
+    updateProductNum('iphone',1219,false);
+  }else if(product == 'case' && price == 59 && increas == false){
+    updateProductNum('case',59,false);
+  }
+}
 //common function for ipnone and case button
 function updateProductNum(product,price,isIncreasing){
   const productInput = document.getElementById(product + '-input');
